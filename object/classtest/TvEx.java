@@ -20,6 +20,7 @@ public class TvEx {
 
         tv2.power();
         System.out.println("전원 상태 : " + tv2.isPower());
+
     }
 
 }

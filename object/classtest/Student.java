@@ -1,3 +1,6 @@
+// this : 자기자신
+// super : 부모
+
 public class Student {
     // 속성
     // 학번 s12345678
@@ -26,20 +29,23 @@ public class Student {
     }
 
     public Student(String id, String name) {
-        this.id = id;
+        // this.id = id;
+        this(id);
         this.name = name;
     }
 
     public Student(String id, String name, String address) {
-        this.id = id;
-        this.name = name;
+        // this.id = id;
+        // this.name = name;
+        this(id, name);
         this.address = address;
     }
 
     public Student(String id, String name, String address, String mobile) {
-        this.id = id;
-        this.name = name;
-        this.address = address;
+        // this.id = id;
+        // this.name = name;
+        // this.address = address;
+        this(id, name, address);
         this.mobile = mobile;
     }
 
