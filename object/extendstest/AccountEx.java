@@ -1,11 +1,16 @@
 package extendstest;
 
 public class AccountEx {
-    CheckingAccount checkingAccount = new CheckingAccount("111-111", "홍길동", 1000000, "222-22");
+    public static void main(String[] args) {
 
-    // 입금하다
-    checkingAccount.deposit(amount);System.out.println("현재 잔액 "+checkingAccount.getBalance())
+        CheckingAccount checkingAccount = new CheckingAccount("111-111", "홍길동", 1000000, "222-22");
 
-    int balance = checkingAccount.pay("222-22", 20000);checkingAccount.pay("222-22",20000);
+        // 입금하다
+        checkingAccount.deposit(100000);
+        System.out.println("현재 잔액 " + checkingAccount.getBalance());
 
+        int balance = checkingAccount.pay("222-22", 20000);
+        System.out.println("현재잔액 : " + balance);
+
+    }
 }
