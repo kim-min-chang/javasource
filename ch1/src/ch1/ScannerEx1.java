@@ -1,8 +1,13 @@
 package ch1;
 
+import java.io.InputStream;
 import java.util.*;
 
 public class ScannerEx1 {
+    public ScannerEx1(InputStream in) {
+        // TODO Auto-generated constructor stub
+    }
+
     public static void main(String[] args) {
         // 대문자로 시작하면 class or interface 라고 생각하면 됨
         // Scanner 는 어디에 선언된 클래스인가 알려줘야됨

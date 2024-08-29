@@ -1,8 +1,8 @@
 package poly;
 
-public class Air {
+public class Air extends Product {
 
-    public static final int price = 0;
+    public final int price = 0;
     public int bonusPoint;
 
     public Air() {
