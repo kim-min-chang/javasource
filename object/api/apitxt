@@ -5,4 +5,33 @@ API Documentation
  - JAVA SE(Standard Edition) : 데스크탑 어플리케이션 개발 => 현재 
  - JAVA EE(Enterprise Edition) : 기업용 어플리케이션 개발 => 웹 개발
 
- 
+ - 주요 클래스
+ 1) 문자열 : String(+ StringBuffer)
+ 2) 날자/시간 : Date(java.utill), LocalDate,LocalTime,LocalDateTime
+ 3) 키보드입력 : Scanner
+ 4) 수학 : Math
+ 5) 컬렉션 프레임워크 : 자료구조 개념이 적용된 클래스
+        데이터를 저장하는 여러가지 다양한 방식의 클래스
+
+  Collection 인터페이스
+        ^
+        |
+        |
+        |
+  List인터페이스  Set인터페이스
+
+  Map 인터페이스
+
+  List : 순서가 있는 데이터의 집합
+         중복허용
+         구현 클래스 - ArrayList,LinkedList, Stack, Vector.....
+         1) ArrayList == 배열
+
+  Set : 순서를 유지하지 않는 데이터의 집합
+        데이터 중복 허용하지 않음
+        구현 클래스 - HashSet, TreeSet ......
+
+  Map : 키와 값의 쌍으로 이루어진 데이터값
+        순서는 유지하지 않음
+        키는 중복불가, 값을 중복 허용
+        구현 클래스 - HashMap,TreeMap ......

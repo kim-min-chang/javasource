@@ -2,7 +2,9 @@ package extendstest;
 
 public class SportsCar extends Car {
 
-    public SportsCar(String name) {
+    private static final String name = null;
+
+    public SportsCar() {
         super(name);
     }
 
