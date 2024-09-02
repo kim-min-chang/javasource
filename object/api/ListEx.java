@@ -1,6 +1,8 @@
 package api;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class ListEx {
         list.add("사과");
         list.add("복숭아");
         list.add("포도");
-        // add(index, 요소) : index 에 추가
+        // add(index, 요소) : index 에 추가 , 자주 하지않음.
         list.add(2, "바나나");
         // 확인
         System.out.println(list);// [사과, 배, 수박, 사과, 복숭아, 포도] - 중복 가능
@@ -40,7 +42,10 @@ public class ListEx {
             System.out.println(object);
         }
 
-        list.sort(Comparator.reverseOrder());
+        // list.sour(Comparator.reverseOrder());
+        // java.util.collections : collection 과 관련된 유용한 메소드 제공
+        // Collections.sort(list); // 오름차순
+        Collections.sort(list, Comparator.reverseOrder()); // 내림차순
         System.out.println(list);
 
     }

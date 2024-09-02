@@ -18,6 +18,11 @@ public class ListEx2 {
         System.out.println(list.remove(2));
         System.out.println(list);
 
+        for (Member member : list) {
+            String id = member.getId();
+            String name = member.getName();
+        }
+
     }
 
 }
