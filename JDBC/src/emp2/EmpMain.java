@@ -1,5 +1,6 @@
 package emp2;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class EmpMain {
@@ -26,21 +27,47 @@ public class EmpMain {
             int menu = Integer.parseInt((sc.nextLine()));
 
             switch (menu) {
-                case 1:
+                case 1: // 사원 정보 입력
                     EmpDTO dto = util.insertEmp(sc);
                     boolean result = service.addEmp(dto);
                     System.out.println(result ? "입력성공" : "입력실패");
                     break;
-                case 2:
+                case 2: // 특정 사원 조회
+                    // get Empno 호출
+                    int empno = util.getEmpno(sc);
+                    // service 의 getRow()호출
+                    dto = service.getRow(empno);
+                    // printEmp() 호출
+                    util.printEmp(dto);
+                    break;
+                case 3: // 전체사원 조회
+                    // service의 getRows
+                    List<EmpDTO> list = service.getRows();
+
+                    // util 의 printListEmp()호출
+                    util.printListEmp(list);
+                    break;
+                case 4: // 사원 정보 수정
+                    // updateInfo() 호출
+                    dto = util.updateInfo(sc);
+                    // updateEmpInfo() 호출 후 결과 받아서 출력
+                    // System.out.println(service.updateEmpInfo(dto) ? "수정 성공" : "수정 실패");
+                    // 수정 성공 시 해당 사원의 정보 출력
+                    if (service.updateEmpInfo(dto)) {
+                        System.out.println("수정 성공");
+                        dto = service.getRow(dto.getEmpno());
+                        util.printEmp(dto);
+                    } else {
+                        System.out.println("수정 실패");
+                    }
 
                     break;
-                case 3:
+                case 5: // 사원 정보 삭제
+                    // deleteEmpNo 호출 후 empno 받기
+                    int deleteEmpNo = util.deleteEmpNo(sc);
+                    // service deleteEmpInfo() 호출 후 결과 출력
 
-                    break;
-                case 4:
-
-                    break;
-                case 5:
+                    System.out.println(service.deleteEmpInfo(deleteEmpNo) ? "삭제 성공" : "삭제 실패");
 
                     break;
                 case 6:
@@ -54,5 +81,4 @@ public class EmpMain {
 
         }
     }
-
 }
